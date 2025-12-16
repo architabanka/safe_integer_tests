@@ -1,3 +1,5 @@
+#ifndef CAST_H
+#define CAST_H
 #pragma once
 #include "./test_suite.h"
 #include "../safe_integer.h"
@@ -9,3 +11,4 @@
 namespace TestCast{
 	void run();
 }
+#endif 

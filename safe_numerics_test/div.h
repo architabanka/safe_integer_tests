@@ -1,3 +1,5 @@
+#ifndef DIV_H
+#define DIV_H
 #pragma once
 #include "./test_suite.h"
 #include "../safe_integer.h"
@@ -9,3 +11,4 @@
 namespace TestDiv{
 	void run();
 }
+#endif

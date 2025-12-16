@@ -24,18 +24,16 @@ public:
 };
 
 void TestMult::run() {
-	std::initializer_list<std::string> heading({"Addition", "x", "y", "Expected", "Verdict"});
+	std::initializer_list<std::string> heading({"Multiplication", "x", "y", "Expected", "Verdict"});
 	{
 		Table<std::int64_t, std::int64_t> t(heading);
-		MultVerifyBase("uint64_uint64", t);
+		MultVerifyBase("int64_int64", t);
 		t.print(std::cout);
 	}
 	{
-		Table<std::int64_t, std::int32_t> t(heading);
-		MultVerifyBase("uint64_uint32", t);
-		t.print(std::cerr);
-	}
-
-	// Add here
+        Table<std::int64_t, std::int32_t> t(heading);
+        MultVerifyBase("int64_int32", t);
+        t.print(std::cerr);
+    }
 
 }

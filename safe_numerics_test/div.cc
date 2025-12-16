@@ -12,7 +12,7 @@ public:
 			const SafeInteger<U> y(c.second());
 			bool success = true;
 			try {
-				auto z = x - y;
+				auto z = x / y;
 			} catch(...) {
 				success = false;
 			}
@@ -36,6 +36,5 @@ void TestDiv::run() {
 		t.print(std::cerr);
 	}
 
-	// Add here
 
 }

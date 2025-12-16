@@ -1,3 +1,5 @@
+#ifndef SUB_H
+#define SUB_H
 #pragma once
 #include "./test_suite.h"
 #include "../safe_integer.h"
@@ -9,3 +11,4 @@
 namespace TestSub{
 	void run();
 }
+#endif

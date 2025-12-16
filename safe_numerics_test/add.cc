@@ -27,7 +27,7 @@ void TestAdd::run() {
 	std::initializer_list<std::string> heading({"Addition", "x", "y", "Expected", "Verdict"});
 	{
 		Table<std::int64_t, std::int64_t> t(heading);
-		AddVerifyBase("uint64_uint64", t);
+		AddVerifyBase("int64_int64", t);
 		t.print(std::cout);
 	}
 	{
@@ -35,7 +35,5 @@ void TestAdd::run() {
 		AddVerifyBase("uint64_uint32", t);
 		t.print(std::cerr);
 	}
-
-	// Add here
 
 }

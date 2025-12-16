@@ -1,4 +1,4 @@
-#include "./test_sub.h"
+#include "./sub.h"
 #include <cstdint>
 #include <initializer_list>
 
@@ -24,18 +24,15 @@ public:
 };
 
 void TestSub::run() {
-	std::initializer_list<std::string> heading({"Addition", "x", "y", "Expected", "Verdict"});
+	std::initializer_list<std::string> heading({"Subtraction", "x", "y", "Expected", "Verdict"});
 	{
 		Table<std::int64_t, std::int64_t> t(heading);
-		SubVerifyBase("uint64_uint64", t);
+		SubVerifyBase("int64_int64", t);
 		t.print(std::cout);
 	}
 	{
-		Table<std::int64_t, std::int32_t> t(heading);
-		SubVerifyBase("uint64_uint32", t);
-		t.print(std::cerr);
-	}
-
-	// Add here
-
+        Table<std::int64_t, std::int32_t> t(heading);
+        SubVerifyBase("int64_int32", t);
+        t.print(std::cerr);
+    }
 }

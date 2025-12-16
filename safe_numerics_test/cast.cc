@@ -6,7 +6,7 @@ template<typename T, typename U>
 class CastVerifyBase {
 public:
 	CastVerifyBase(const std::string name, Table<T, U> &t) {
-		TestSuite<T, U, Operation::Add> tests;
+		TestSuite<T, U, Operation::Cast> tests;
 		for(const auto & c : tests.get_cases()) {
 			const SafeInteger<T> x(c.first());
 			bool success = true;
@@ -23,7 +23,7 @@ public:
 };
 
 void TestCast::run() {
-	std::initializer_list<std::string> heading({"Addition", "x", "y", "Expected", "Verdict"});
+	std::initializer_list<std::string> heading({"Casting", "x", "y", "Expected", "Verdict"});
 	{
 		Table<std::int64_t, std::int64_t> t(heading);
 		CastVerifyBase("uint64_uint64", t);

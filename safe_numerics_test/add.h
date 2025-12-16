@@ -1,3 +1,5 @@
+#ifndef ADD_H
+#define ADD_H
 #pragma once
 #include "./test_suite.h"
 #include "../safe_integer.h"
@@ -9,3 +11,4 @@
 namespace TestAdd{
 	void run();
 }
+#endif
